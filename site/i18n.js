@@ -4,7 +4,7 @@
 
 window.I18N = {
   meta: {
-    title: { en: "Alessandro Rossi — Fullstack Developer", it: "Alessandro Rossi — Sviluppatore Fullstack" },
+    title: { en: "Alessandro Rossi — Fullstack Developer and DEVOPS", it: "Alessandro Rossi — Sviluppatore Fullstack e DEVOPS" },
     description: {
       en: "Fullstack developer building robust web apps with Rust, C#, and TypeScript.",
       it: "Sviluppatore fullstack che costruisce applicazioni web robuste con Rust, C# e TypeScript.",
@@ -26,7 +26,7 @@ window.I18N = {
     lede:    { en: "The lede",    it: "L'apertura" },
     headline: {
       en: ["A fullstack developer with", "opinions", "on", "quality", "products", "and", "niche solutions."],
-      it: ["Uno sviluppatore fullstack con", "opinioni", "su", "qualità", "caching", "e", "macchine Linux."],
+      it: ["Uno sviluppatore fullstack con", "focus", "su", "qualità del codice", "e soluzioni scalabili"],
     },
     quote: {
       en: "Fullstack developer building robust web apps with Rust, C#, and TypeScript. Lately: DevOps and self-hosting.",
@@ -45,7 +45,7 @@ window.I18N = {
     rolev:      { en: "Fullstack Developer", it: "Sviluppatore Fullstack" },
     locationv:  { en: "Italy · CET",         it: "Italia · CET" },
     specialtyv: { en: "Backend · APIs · DevOps · AI", it: "Backend · API · DevOps · AI" },
-    statusv:    { en: "● Open to interesting things", it: "● Disponibile per cose interessanti" },
+    statusv:    { en: "● Open to interesting things", it: "● Disponibile per nuove frontiere" },
     yearsv:     { en: "4",                   it: "4" },
     signed:     { en: "Signed · A.R.",       it: "Firmato · A.R." },
     stamped:    { en: "STAMPED · APPROVED",  it: "TIMBRATO · APPROVATO" },
@@ -56,14 +56,14 @@ window.I18N = {
     mins:      { en: "3 minutes",          it: "3 minuti" },
     filed:     { en: "filed under",        it: "categoria" },
     biography: { en: "biography",          it: "biografia" },
-    note:      { en: "EDITOR'S NOTE",      it: "NOTA DELL'EDITORE" },
+    note:      { en: "EDITOR'S NOTE",      it: "NOTA DELL'EDITOR" },
     long: {
       en: "I am a fullstack developer with a strong background in Rust and C# for backend solutions, as well as Angular and React on the frontend. In addition to building robust web applications, I specialize in creating efficient APIs that bridge databases and application layers. Over the two past years I've also ventured into DevOps, applied complex Azure solutions in productions and experimanted with Kubernetes, including this very website, which I host myself.",
-      it: "Sono uno sviluppatore fullstack con una solida esperienza in Rust e C# per le soluzioni backend, oltre ad Angular e React sul frontend. Oltre a costruire applicazioni web robuste, mi specializzo nella creazione di API efficienti che collegano database e livelli applicativi. Nell'ultimo anno mi sono avventurato anche nel DevOps — applicato in Interlogica e su progetti personali, incluso questo stesso sito che ospito autonomamente.",
+      it: "Sono uno sviluppatore fullstack con una solida esperienza in Rust e C# per le soluzioni backend, oltre ad Angular e React sul frontend. Oltre a costruire applicazioni web robuste, mi specializzo nella creazione di API efficienti che collegano database e livelli applicativi. Negli ultimi anni mi sono avventurato anche nel DevOps — applicato in Interlogica e su progetti personali, incluso questo stesso sito che self-hosto.",
     },
     philosophy: {
       en: "My approach is grounded in the pursuit of high-quality code. I tackle tickets, fix issues, and continuously improve existing codebases and the infrastructure around them. I'm passionate about new tech and keeping up with the latest developments and always experimenting with new technologies in my free time.",
-      it: "Il mio approccio si fonda sulla ricerca di codice di alta qualità. Affronto ticket, risolvo problemi e miglioro continuamente le codebase esistenti e l'infrastruttura attorno. Sono appassionato di nuove tecnologie e dello stare aggiornato — mi aiuta ad adattarmi a nuove sfide e a risolvere problemi complessi con esperienze user-friendly.",
+      it: "Il mio approccio si fonda sulla ricerca di codice di alta qualità. Affronto ticket, risolvo problemi e miglioro continuamente le codebase esistenti e l'infrastruttura attorno. Sono appassionato di nuove tecnologie e dello stare aggiornato, mi aiuta ad adattarmi a nuove sfide e a risolvere problemi complessi con esperienze user-friendly.",
     },
     pullquote: {
       en: "\"I strive for excellence and take pride in every aspect of my work.— Whether building something new or optimizing the old, the rigour stays the same. \"",
@@ -150,7 +150,7 @@ window.I18N = {
     h3:      { en: "on it.",               it: "sopra." },
     blurb: {
       en: "I host the entire site and every project on a single Hetzner cloud instance. Each project is containerized with Docker and deployed to a remote Linux VM. Organized, resource-efficient, and easy to scale.",
-      it: "Ospito l'intero sito e ogni progetto su un singolo droplet DigitalOcean. Ogni progetto è containerizzato con Docker e deployato su una VM Linux remota. Organizzato, efficiente nelle risorse e facile da scalare.",
+      it: "Ospito l'intero sito e ogni progetto su un singolo server di Hetzner Cloud. Ogni progetto è containerizzato con Docker e deployato su una VM Linux remota. Organizzato, efficiente nelle risorse e facile da scalare.",
     },
     topology: { en: "Topology · self-hosted", it: "Topologia · self-hosted" },
     fig:      { en: "FIG. III · diagram",       it: "FIG. III · diagramma" },
@@ -189,7 +189,7 @@ window.I18N = {
         {
           year: "03/2022 — Present", company: "Interlogica",
           role: "Fullstack Developer", client: "Ayvens (formerly ALD)",
-          body: "Working directly with Ayvens, a prominent car-rental company. My team and I maintain the Ayvens API and its associated services. We manage legacy APIs built using BizTalk while developing the next generation with ASP.NET Core 3.1.",
+          body: "Working directly with Ayvens, a prominent car-rental company. My team and I maintain the Ayvens API and its associated services. We manage legacy APIs built using BizTalk while developing the next generation with ASP.NET 10",
           body2: "Alongside business logic we maintain multiple databases for the client — Oracle and SQL instances. Classic Agile workflow: Jira tickets submitted by the client, estimated, organized through the sprint. In 2024 Ayvens updated its internal security policy and tasked us with building a new Azure API Manager for secure connections to the outside world.",
           tags: ["C#", ".NET Core", "BizTalk", "Oracle", "MS SQL", "Azure"],
         },
@@ -205,7 +205,7 @@ window.I18N = {
         {
           year: "03/2022 — Presente", company: "Interlogica",
           role: "Sviluppatore Fullstack", client: "Ayvens (ex ALD)",
-          body: "Lavoro direttamente con Ayvens, un'importante azienda di noleggio auto. Il mio team e io manteniamo l'API Ayvens e i servizi associati. Gestiamo API legacy costruite con BizTalk mentre sviluppiamo la prossima generazione con ASP.NET Core 3.1.",
+          body: "Lavoro direttamente con Ayvens, un'importante azienda di noleggio auto. Il mio team e io manteniamo l'API Ayvens e i servizi associati. Gestiamo API legacy costruite con BizTalk mentre sviluppiamo la prossima generazione con ASP.NET 10",
           body2: "Oltre alla logica di business, manteniamo diversi database per il cliente — istanze Oracle e SQL. Workflow Agile classico: ticket Jira inviati dal cliente, stimati, organizzati nello sprint. Nel 2024 Ayvens ha aggiornato la sua policy di sicurezza interna e ci ha incaricato di costruire un nuovo Azure API Manager per connessioni sicure verso l'esterno.",
           tags: ["C#", ".NET Core", "BizTalk", "Oracle", "MS SQL", "Azure"],
         },
@@ -228,7 +228,7 @@ window.I18N = {
 
 // ── runtime helpers ──
 window.LANG = (function() {
-  const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('lang')) || 'en';
+  const saved = (typeof localStorage !== 'undefined' && localStorage.getItem('lang')) || 'it';
   return saved === 'it' ? 'it' : 'en';
 })();
 

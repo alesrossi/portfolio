@@ -1,6 +1,7 @@
 FROM nginx:1.27-alpine
 
 COPY site/ /usr/share/nginx/html/
+COPY CV.pdf /usr/share/nginx/html/CV.pdf
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Give nginx user read access to the static files

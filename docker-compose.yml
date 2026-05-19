@@ -1,0 +1,16 @@
+services:
+  portfolio:
+    build: .
+    image: alesrossi/portfolio:latest
+    container_name: portfolio
+    restart: unless-stopped
+    ports:
+      - "8080:80"     # change to "80:80" if running standalone
+    # If you sit behind another nginx/Traefik, drop the ports: block
+    # and put this on a shared docker network instead.
+    networks:
+      - web
+
+networks:
+  web:
+    driver: bridge

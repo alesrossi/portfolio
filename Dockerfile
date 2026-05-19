@@ -1,19 +1,13 @@
-FROM node:alpine
+FROM nginx:1.27-alpine
 
-WORKDIR /usr/server/app
+COPY site/ /usr/share/nginx/html/
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-RUN apk add --update nodejs npm
+# Give nginx user read access to the static files
+RUN chown -R nginx:nginx /usr/share/nginx/html && \
+    chmod -R 755 /usr/share/nginx/html
 
-RUN apk add --update npm
+EXPOSE 80
 
-COPY ./package.json ./
-
-RUN npm install
-
-COPY ./ .
-
-RUN npm run build # will build remix app
-
-ENV NODE_ENV=production
-
-CMD ["npm", "run", "start"]
+HEALTHCHECK --interval=30s --timeout=3s --retries=3 \
+  CMD wget -qO- http://localhost/ >/dev/null || exit 1

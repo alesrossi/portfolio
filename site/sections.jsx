@@ -135,6 +135,107 @@ function AboutSection() {
   );
 }
 
+function SurveylSection() {
+  window.useLang();
+  const pillars = I18N.surveyl.pillars[window.LANG];
+  const stack = I18N.surveyl.stack[window.LANG];
+  return (
+    <section style={{ padding: '72px 56px', background: 'var(--bg)', borderBottom: '1px solid var(--fg)' }} className="pad-56 reveal">
+      <div style={{ marginBottom: 40, textAlign: 'center' }}>
+        <PaperLabel>{tt(I18N.surveyl.section)}</PaperLabel>
+        <h2 style={{
+          fontFamily: 'var(--serif)',
+          fontSize: 'clamp(56px, 11vw, 180px)',
+          fontWeight: 700, lineHeight: 0.9, marginTop: 12,
+          letterSpacing: '-0.05em', fontVariationSettings: '"opsz" 144',
+        }}>
+          <span style={{ fontStyle: 'italic', fontFamily: 'var(--serif-italic)', fontWeight: 400, color: 'var(--accent)' }}>{tt(I18N.surveyl.h1)}</span>{tt(I18N.surveyl.h2)}
+        </h2>
+        <p style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--dim)', marginTop: 14 }}>
+          {tt(I18N.surveyl.sub)}
+        </p>
+        <div style={{ display: 'flex', gap: 12, marginTop: 24, justifyContent: 'center' }}>
+          <a href="https://surveyl.top/" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '8px 18px', border: '1px solid var(--fg)', background: 'var(--fg)', color: 'var(--bg)', textDecoration: 'none' }}>{tt(I18N.surveyl.links.live)}</a>
+          <a href="https://info.surveyl.top/" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '8px 18px', border: '1px solid var(--fg)', background: 'transparent', color: 'var(--fg)', textDecoration: 'none' }}>{tt(I18N.surveyl.links.info)}</a>
+        </div>
+      </div>
+
+      {/* pillars */}
+      <div className="grid-4" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', border: '1px solid var(--fg)', background: 'var(--paper)', marginBottom: 0 }}>
+        {pillars.map((p, i) => (
+          <div key={i} style={{ padding: '20px 20px', borderRight: i < 3 ? '1px solid var(--fg)' : 'none' }}>
+            <PaperLabel color="var(--accent2)">0{i+1} / 04</PaperLabel>
+            <div style={{ fontFamily: 'var(--serif)', fontSize: 20, marginTop: 6, fontWeight: 500 }}>{p.k}</div>
+            <div style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--dim)', lineHeight: 1.5, marginTop: 6 }}>{p.v}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* body + diagram */}
+      <div className="grid-2" style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', borderLeft: '1px solid var(--fg)', borderRight: '1px solid var(--fg)', borderBottom: '1px solid var(--fg)' }}>
+        <div style={{ padding: '40px 36px' }}>
+          <p style={{ fontFamily: 'var(--serif)', fontSize: 20, lineHeight: 1.55, fontVariationSettings: '"opsz" 14' }}>
+            {tt(I18N.surveyl.body)}
+          </p>
+          <p style={{ fontFamily: 'var(--serif)', fontSize: 18, lineHeight: 1.55, marginTop: 20, fontVariationSettings: '"opsz" 14', color: 'var(--dim)' }}>
+            {tt(I18N.surveyl.body2)}
+          </p>
+          <div style={{ marginTop: 32 }}>
+            <PaperLabel color="var(--accent2)">{tt(I18N.surveyl.sidebar)}</PaperLabel>
+            <table style={{ width: '100%', marginTop: 16, fontFamily: 'var(--mono)', fontSize: 12, borderCollapse: 'collapse' }}>
+              <tbody>
+                {Object.entries(stack).map(([k, val]) => (
+                  <tr key={k} style={{ borderBottom: '1px dashed var(--dim)' }}>
+                    <td style={{ padding: '8px 0', color: 'var(--dim)', textTransform: 'uppercase', fontSize: 10, letterSpacing: '0.12em' }}>{k}</td>
+                    <td style={{ padding: '8px 0', textAlign: 'right', fontWeight: 600 }}>{val}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div style={{ borderLeft: '1px solid var(--fg)', padding: '32px 28px', background: 'var(--paper)' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 20, flexWrap: 'wrap', gap: 8 }}>
+            <PaperLabel color="var(--fg)">{tt(I18N.surveyl.diagram)}</PaperLabel>
+            <span style={{ fontFamily: 'var(--mono)', fontSize: 9, color: 'var(--dim)' }}>{tt(I18N.surveyl.fig)}</span>
+          </div>
+          <pre style={{ fontFamily: 'var(--mono)', fontSize: 11, lineHeight: 1.9, color: 'var(--fg)', whiteSpace: 'pre', overflow: 'auto' }}>
+{`          Internet
+              │
+  ┌───────────▼───────────┐
+  │     Nginx Ingress      │  TLS
+  └──────────┬────────────┘
+             │
+   ┌─────────┴──────────┐
+   │                    │
+┌──▼───────┐     ┌──────▼────┐
+│   API    │     │ Frontend  │
+│(ASP.NET) │     │  (SPA)    │
+└──┬───────┘     └───────────┘
+   │
+┌──┴──────────────────┐
+│                     │
+┌─▼──────┐    ┌───────▼────┐
+│ Redis  │    │ PostgreSQL │
+│ Cache  │    │StatefulSet │
+│ Tokens │    │    PVC     │
+└────────┘    └────────────┘
+
+┌────────────────────────────┐
+│       Observability        │
+│  Filebeat → Elasticsearch  │
+│              → Kibana      │
+└────────────────────────────┘`}
+          </pre>
+          <div style={{ marginTop: 16, paddingTop: 12, borderTop: '1px dashed var(--dim)', fontFamily: 'var(--mono)', fontSize: 10, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--accent)' }}>
+            CI/CD: GitHub Actions → Docker Hub → helm upgrade
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function SkinetSection() {
   window.useLang();
   const [tab, setTab] = React.useState(0);
@@ -342,6 +443,7 @@ function WorkSection() {
 
 window.HeroSection = HeroSection;
 window.AboutSection = AboutSection;
+window.SurveylSection = SurveylSection;
 window.SkinetSection = SkinetSection;
 window.InfraSection = InfraSection;
 window.StudiesSection = StudiesSection;

@@ -76,8 +76,51 @@ window.I18N = {
     data:     { en: "data",     it: "dati" },
     devops:   { en: "devops",   it: "devops" },
   },
+  surveyl: {
+    section: { en: "§ II. The Deep Dive", it: "§ II. L'Approfondimento" },
+    h1:      { en: "Surveyl.",  it: "Surveyl." },
+    h2:      { en: "Top",       it: "Top" },
+    sub:     { en: "Production backend · REST API · Kubernetes", it: "Backend in produzione · REST API · Kubernetes" },
+    blurb: {
+      en: "A production-grade REST API backend for Surveyl.Top. Built with ASP.NET Core Minimal APIs following Clean Architecture principles, deployed on a Kubernetes cluster on Hetzner.",
+      it: "Un backend REST API production-grade per Surveyl.Top. Costruito con ASP.NET Core Minimal APIs seguendo la Clean Architecture, deployato su un cluster Kubernetes su Hetzner.",
+    },
+    pillars: {
+      en: [
+        { k: "Clean Architecture", v: "Domain logic isolated from infra. Unit of Work + Repository patterns." },
+        { k: "Auth & Caching",     v: "JWT tokens (1h access / 30d refresh). Redis for cache and token blacklist." },
+        { k: "Observability",      v: "Serilog → Elasticsearch + Kibana. Correlation ID on every request." },
+        { k: "Real Integration Tests", v: "Testcontainers: real Postgres + Redis per run. No mocked layers." },
+      ],
+      it: [
+        { k: "Clean Architecture",    v: "Logica di dominio isolata dall'infra. Unit of Work + Repository." },
+        { k: "Auth & Cache",          v: "JWT token (1h access / 30d refresh). Redis per cache e blacklist token." },
+        { k: "Observabilità",         v: "Serilog → Elasticsearch + Kibana. Correlation ID su ogni richiesta." },
+        { k: "Test di integrazione reali", v: "Testcontainers: Postgres + Redis reali per ogni run. Niente mock." },
+      ],
+    },
+    body: {
+      en: "The Surveyl.Top backend is a REST API built with ASP.NET Core Minimal APIs — no controller overhead, endpoints organised by domain feature and registered explicitly, keeping routing transparent and testable. Persistence goes through PostgreSQL via Entity Framework Core with a code-first migration workflow. The Unit of Work and Repository patterns abstract all data access so business logic carries no framework dependencies.",
+      it: "Il backend di Surveyl.Top è una REST API costruita con ASP.NET Core Minimal APIs — nessun overhead da controller, endpoint organizzati per feature di dominio e registrati esplicitamente, mantenendo il routing trasparente e testabile. La persistenza passa per PostgreSQL via Entity Framework Core con un workflow code-first. Unit of Work e Repository astraggono tutti gli accessi ai dati, così la logica di business non ha dipendenze dal framework.",
+    },
+    body2: {
+      en: "Redis does double duty: distributed cache for expensive external lookups, and token store for JWT refresh and blacklist logic. Auth stays stateless at the verification layer while retaining immediate revocation. The Hetzner Kubernetes cluster distributes workloads with affinity rules; stateful services use cloud block storage PVCs. TLS managed by cert-manager with Let's Encrypt.",
+      it: "Redis svolge un doppio ruolo: cache distribuita per lookup costosi, e token store per la logica JWT di refresh e blacklist. L'auth rimane stateless al livello di verifica pur mantenendo la revoca immediata. Il cluster Kubernetes su Hetzner distribuisce i workload con regole di affinità; i servizi stateful usano PVC su block storage cloud. TLS gestito da cert-manager con Let's Encrypt.",
+    },
+    stack: {
+      en: { runtime: "ASP.NET Core 9", db: "PostgreSQL + EF Core", cache: "Redis", auth: "JWT + ASP.NET Identity", logging: "Serilog → ELK", tests: "xUnit + Testcontainers", deploy: "Docker + Helm + K8s" },
+      it: { runtime: "ASP.NET Core 9", db: "PostgreSQL + EF Core", cache: "Redis", auth: "JWT + ASP.NET Identity", logging: "Serilog → ELK", tests: "xUnit + Testcontainers", deploy: "Docker + Helm + K8s" },
+    },
+    links: {
+      info: { en: "Info page ↗", it: "Pagina info ↗" },
+      live: { en: "Live site ↗", it: "Sito live ↗" },
+    },
+    diagram: { en: "Cluster · diagram",   it: "Cluster · diagramma" },
+    fig:     { en: "FIG. II · Kubernetes", it: "FIG. II · Kubernetes" },
+    sidebar: { en: "specs · sidebar",      it: "specifiche · barra laterale" },
+  },
   skinet: {
-    section: { en: "§ II. The Cover Story", it: "§ II. La Storia di Copertina" },
+    section: { en: "§ III. The Cover Story", it: "§ III. La Storia di Copertina" },
     h1:      { en: "One spec.",              it: "Una specifica." },
     h2:      { en: "Three",                  it: "Tre" },
     h3:      { en: "stacks.",                it: "stack." },
@@ -144,7 +187,7 @@ window.I18N = {
     },
   },
   infra: {
-    section: { en: "§ III. The Workshop", it: "§ III. L'Officina" },
+    section: { en: "§ IV. The Workshop", it: "§ IV. L'Officina" },
     h1:      { en: "A single server,",   it: "Un singolo droplet," },
     h2:      { en: "everything",           it: "tutto" },
     h3:      { en: "on it.",               it: "sopra." },
@@ -160,7 +203,7 @@ window.I18N = {
     },
   },
   studies: {
-    section: { en: "§ IV. Education", it: "§ IV. Formazione" },
+    section: { en: "§ V. Education", it: "§ V. Formazione" },
     items: {
       en: [{
         year: "2018 — 2022",
@@ -181,7 +224,7 @@ window.I18N = {
     },
   },
   work: {
-    section: { en: "§ V. Work history", it: "§ V. Esperienza lavorativa" },
+    section: { en: "§ VI. Work history", it: "§ VI. Esperienza lavorativa" },
     asRole:  { en: "as",   it: "come" },
     forCli:  { en: "for",  it: "per" },
     items: {

@@ -154,9 +154,12 @@ function SurveylSection() {
         <p style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--dim)', marginTop: 14 }}>
           {tt(I18N.surveyl.sub)}
         </p>
+        <p style={{ fontFamily: 'var(--serif-italic)', fontStyle: 'italic', fontSize: 22, lineHeight: 1.5, marginTop: 24, maxWidth: '60ch', marginLeft: 'auto', marginRight: 'auto', color: 'var(--dim)' }}>
+          {tt(I18N.surveyl.blurb)}
+        </p>
         <div style={{ display: 'flex', gap: 12, marginTop: 24, justifyContent: 'center' }}>
           <a href="https://surveyl.top/" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '8px 18px', border: '1px solid var(--fg)', background: 'var(--fg)', color: 'var(--bg)', textDecoration: 'none' }}>{tt(I18N.surveyl.links.live)}</a>
-          <a href="https://info.surveyl.top/" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '8px 18px', border: '1px solid var(--fg)', background: 'transparent', color: 'var(--fg)', textDecoration: 'none' }}>{tt(I18N.surveyl.links.info)}</a>
+          <a href="surveyl.html" style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '8px 18px', border: '1px solid var(--fg)', background: 'transparent', color: 'var(--fg)', textDecoration: 'none' }}>{tt(I18N.surveyl.links.info)}</a>
         </div>
       </div>
 
@@ -441,6 +444,214 @@ function WorkSection() {
   );
 }
 
+function SurveylArticleHero() {
+  window.useLang();
+  const a = I18N.surveylArticle;
+  const title = tt(a.title);
+  return (
+    <section style={{ padding: '64px 56px 48px', background: 'var(--bg)', borderBottom: '1px solid var(--fg)' }} className="pad-56 reveal">
+      <a href="portfolio.html" style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--dim)', textDecoration: 'none' }}>{tt(a.back)}</a>
+      <div style={{ marginTop: 24, maxWidth: 860 }}>
+        <PaperLabel>{tt(a.kicker)}</PaperLabel>
+        <h2 style={{
+          fontFamily: 'var(--serif)',
+          fontSize: 'clamp(40px, 7vw, 96px)',
+          fontWeight: 500, lineHeight: 1.0, marginTop: 16,
+          letterSpacing: '-0.03em', fontVariationSettings: '"opsz" 144',
+        }}>
+          {title[0]}<br/>
+          <span style={{ fontStyle: 'italic', fontFamily: 'var(--serif-italic)', color: 'var(--accent)' }}>{title[1]}</span>
+        </h2>
+        <Rule color="var(--fg)" thick/>
+        <p style={{ marginTop: 16, fontFamily: 'var(--serif-italic)', fontStyle: 'italic', fontSize: 20, color: 'var(--dim)' }}>{tt(a.subtitle)}</p>
+        <p style={{ marginTop: 24, fontFamily: 'var(--serif)', fontSize: 19, lineHeight: 1.6, fontVariationSettings: '"opsz" 14' }}>{tt(a.lede)}</p>
+      </div>
+    </section>
+  );
+}
+
+function SurveylArticleStory() {
+  window.useLang();
+  const a = I18N.surveylArticle;
+  return (
+    <section style={{ padding: '64px 56px', background: 'var(--paper)', borderBottom: '1px solid var(--fg)' }} className="pad-56 reveal">
+      <div className="grid-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48 }}>
+        <div>
+          <PaperLabel color="var(--accent2)">{tt(a.whatItIs.heading)}</PaperLabel>
+          <p style={{ marginTop: 16, fontFamily: 'var(--serif)', fontSize: 19, lineHeight: 1.55, fontVariationSettings: '"opsz" 14' }}>
+            <span style={{
+              float: 'left', fontFamily: 'var(--serif)', fontSize: 80, lineHeight: 0.85,
+              padding: '6px 10px 0 0', color: 'var(--accent)', fontWeight: 700,
+              fontVariationSettings: '"opsz" 144',
+            }}>{tt(a.whatItIs.body1)[0]}</span>
+            {tt(a.whatItIs.body1).slice(1)}
+          </p>
+          <p style={{ marginTop: 16, fontFamily: 'var(--serif)', fontSize: 18, lineHeight: 1.55, color: 'var(--dim)', fontVariationSettings: '"opsz" 14' }}>
+            {tt(a.whatItIs.body2)}
+          </p>
+        </div>
+        <div>
+          <PaperLabel color="var(--accent2)">{tt(a.versionControl.heading)}</PaperLabel>
+          <p style={{ marginTop: 16, fontFamily: 'var(--serif)', fontSize: 18, lineHeight: 1.55, fontVariationSettings: '"opsz" 14' }}>
+            {tt(a.versionControl.body1)}
+          </p>
+          <p style={{ marginTop: 14, fontFamily: 'var(--serif)', fontSize: 18, lineHeight: 1.55, fontVariationSettings: '"opsz" 14' }}>
+            {tt(a.versionControl.body2)}
+          </p>
+          <div style={{ marginTop: 20, padding: '20px 24px', background: 'var(--bg)', border: '1px solid var(--fg)', position: 'relative' }}>
+            <span style={{ position: 'absolute', top: -8, left: 16, background: 'var(--paper)', padding: '0 8px', fontFamily: 'var(--mono)', fontSize: 10, letterSpacing: '0.15em', color: 'var(--accent)' }}>{tt(I18N.about.note)}</span>
+            <p style={{ fontFamily: 'var(--serif-italic)', fontStyle: 'italic', fontSize: 16, lineHeight: 1.5 }}>
+              {tt(a.versionControl.body3)}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function SurveylArticleBackend() {
+  window.useLang();
+  const a = I18N.surveylArticle;
+  const layers = a.backend.layers[window.LANG];
+  const patterns = a.backend.patterns[window.LANG];
+  return (
+    <section style={{ padding: '72px 56px', background: 'var(--bg)', borderBottom: '1px solid var(--fg)' }} className="pad-56 reveal">
+      <PaperLabel>{tt(a.backend.heading)}</PaperLabel>
+      <p style={{ marginTop: 16, fontFamily: 'var(--serif)', fontSize: 19, lineHeight: 1.55, maxWidth: '70ch', fontVariationSettings: '"opsz" 14' }}>
+        {tt(a.backend.intro)}
+      </p>
+
+      <div className="grid-3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', border: '1px solid var(--fg)', background: 'var(--paper)', marginTop: 24 }}>
+        {layers.map((l, i) => (
+          <div key={i} style={{ padding: '20px 20px', borderRight: i < layers.length - 1 ? '1px solid var(--fg)' : 'none' }}>
+            <PaperLabel color="var(--accent2)">{l.k}</PaperLabel>
+            <div style={{ fontFamily: 'var(--mono)', fontSize: 12, color: 'var(--dim)', lineHeight: 1.5, marginTop: 8 }}>{l.v}</div>
+          </div>
+        ))}
+      </div>
+
+      <div style={{ marginTop: 40 }}>
+        <PaperLabel color="var(--accent2)">{tt(a.backend.patternsHeading)}</PaperLabel>
+        <div className="grid-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24, marginTop: 16 }}>
+          {patterns.map((p, i) => (
+            <div key={i} style={{ padding: '20px 24px', border: '1px solid var(--fg)', background: 'var(--paper)' }}>
+              <div style={{ fontFamily: 'var(--serif)', fontSize: 18, fontWeight: 500, marginBottom: 8 }}>{p.k}</div>
+              <div style={{ fontFamily: 'var(--mono)', fontSize: 12, color: 'var(--dim)', lineHeight: 1.6 }}>{p.v}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="grid-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 48, marginTop: 40 }}>
+        <p style={{ fontFamily: 'var(--serif)', fontSize: 18, lineHeight: 1.55, fontVariationSettings: '"opsz" 14' }}>{tt(a.backend.catalogue)}</p>
+        <p style={{ fontFamily: 'var(--serif)', fontSize: 18, lineHeight: 1.55, fontVariationSettings: '"opsz" 14', color: 'var(--dim)' }}>{tt(a.backend.testing)}</p>
+      </div>
+    </section>
+  );
+}
+
+function SurveylArticleDeploy() {
+  window.useLang();
+  const a = I18N.surveylArticle;
+  const notes = a.deployment.notes[window.LANG];
+  return (
+    <section style={{ padding: '72px 56px', background: 'var(--paper)', borderBottom: '1px solid var(--fg)' }} className="pad-56 reveal">
+      <div className="grid-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1.1fr', gap: 48 }}>
+        <div>
+          <PaperLabel>{tt(a.deployment.heading)}</PaperLabel>
+          <p style={{ marginTop: 16, fontFamily: 'var(--serif)', fontSize: 19, lineHeight: 1.55, fontVariationSettings: '"opsz" 14' }}>
+            {tt(a.deployment.intro)}
+          </p>
+          <ul style={{ marginTop: 20, paddingLeft: 0, listStyle: 'none' }}>
+            {notes.map((n, i) => (
+              <li key={i} style={{ display: 'flex', gap: 12, marginTop: 14, fontFamily: 'var(--serif)', fontSize: 16, lineHeight: 1.5, fontVariationSettings: '"opsz" 14' }}>
+                <span style={{ fontFamily: 'var(--mono)', fontSize: 11, color: 'var(--accent)', flexShrink: 0 }}>0{i + 1}</span>
+                <span>{n}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div style={{ background: 'var(--bg)', border: '1px solid var(--fg)', padding: '28px 28px', boxShadow: '8px 8px 0 var(--fg)' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 20, flexWrap: 'wrap', gap: 8 }}>
+            <PaperLabel color="var(--fg)">{tt(a.deployment.diagramLabel)}</PaperLabel>
+            <span style={{ fontFamily: 'var(--mono)', fontSize: 9, color: 'var(--dim)' }}>{tt(a.deployment.fig)}</span>
+          </div>
+          <pre style={{ fontFamily: 'var(--mono)', fontSize: 11, lineHeight: 1.7, color: 'var(--fg)', whiteSpace: 'pre', overflow: 'auto' }}>
+            {tt(a.deployment.diagram)}
+          </pre>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function SurveylArticleOutro() {
+  window.useLang();
+  const a = I18N.surveylArticle;
+  const ready = a.scaling.ready[window.LANG];
+  const roadmap = a.scaling.roadmap[window.LANG];
+  return (
+    <section style={{ padding: '72px 56px', background: 'var(--bg)', borderBottom: '1px solid var(--fg)' }} className="pad-56 reveal">
+      <PaperLabel>{tt(a.scaling.heading)}</PaperLabel>
+      <p style={{ marginTop: 16, fontFamily: 'var(--serif)', fontSize: 19, lineHeight: 1.55, maxWidth: '70ch', fontVariationSettings: '"opsz" 14' }}>
+        {tt(a.scaling.intro)}
+      </p>
+
+      <div className="grid-2" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 32, marginTop: 32 }}>
+        <div>
+          <PaperLabel color="var(--accent2)">{tt(a.scaling.readyHeading)}</PaperLabel>
+          {ready.map((r, i) => (
+            <div key={i} style={{ marginTop: 14, paddingTop: 14, borderTop: '1px dashed var(--dim)' }}>
+              <div style={{ fontFamily: 'var(--serif)', fontSize: 17, fontWeight: 500 }}>{r.k}</div>
+              <div style={{ fontFamily: 'var(--mono)', fontSize: 12, color: 'var(--dim)', lineHeight: 1.6, marginTop: 4 }}>{r.v}</div>
+            </div>
+          ))}
+        </div>
+        <div>
+          <PaperLabel color="var(--accent2)">{tt(a.scaling.roadmapHeading)}</PaperLabel>
+          {roadmap.map((r, i) => (
+            <div key={i} style={{ marginTop: 14, paddingTop: 14, borderTop: '1px dashed var(--dim)' }}>
+              <div style={{ fontFamily: 'var(--serif)', fontSize: 17, fontWeight: 500 }}>{r.k}</div>
+              <div style={{ fontFamily: 'var(--mono)', fontSize: 12, color: 'var(--dim)', lineHeight: 1.6, marginTop: 4 }}>{r.v}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <p style={{ marginTop: 32, fontFamily: 'var(--serif-italic)', fontStyle: 'italic', fontSize: 19, lineHeight: 1.55, color: 'var(--dim)', maxWidth: '70ch' }}>
+        {tt(a.scaling.outro)}
+      </p>
+    </section>
+  );
+}
+
+function SurveylArticleTakeaway() {
+  window.useLang();
+  const a = I18N.surveylArticle;
+  return (
+    <section style={{ padding: '72px 56px', background: 'var(--paper)', borderBottom: '1px solid var(--fg)' }} className="pad-56 reveal">
+      <div style={{ maxWidth: 860, margin: '0 auto' }}>
+        <PaperLabel>{tt(a.takeaway.heading)}</PaperLabel>
+        <p style={{ marginTop: 16, fontFamily: 'var(--serif)', fontSize: 19, lineHeight: 1.55, fontVariationSettings: '"opsz" 14' }}>
+          {tt(a.takeaway.body1)}
+        </p>
+        <p style={{ marginTop: 16, fontFamily: 'var(--serif)', fontSize: 19, lineHeight: 1.55, fontVariationSettings: '"opsz" 14' }}>
+          {tt(a.takeaway.body2)}
+        </p>
+        <div style={{ display: 'flex', gap: 12, marginTop: 24, flexWrap: 'wrap' }}>
+          <a href="https://surveyl.top/" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '8px 18px', border: '1px solid var(--fg)', background: 'var(--fg)', color: 'var(--bg)', textDecoration: 'none' }}>{tt(a.takeaway.links.website)}</a>
+          <a href="https://app.surveyl.top/" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '8px 18px', border: '1px solid var(--fg)', background: 'transparent', color: 'var(--fg)', textDecoration: 'none' }}>{tt(a.takeaway.links.app)}</a>
+          <span style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '8px 18px', border: '1px dashed var(--dim)', color: 'var(--dim)' }}>{tt(a.takeaway.links.store)}</span>
+        </div>
+        <p style={{ marginTop: 32, fontFamily: 'var(--serif-italic)', fontStyle: 'italic', fontSize: 20, lineHeight: 1.5, color: 'var(--accent)' }}>
+          {tt(a.takeaway.closing)}
+        </p>
+      </div>
+    </section>
+  );
+}
+
 window.HeroSection = HeroSection;
 window.AboutSection = AboutSection;
 window.SurveylSection = SurveylSection;
@@ -448,3 +659,9 @@ window.SkinetSection = SkinetSection;
 window.InfraSection = InfraSection;
 window.StudiesSection = StudiesSection;
 window.WorkSection = WorkSection;
+window.SurveylArticleHero = SurveylArticleHero;
+window.SurveylArticleStory = SurveylArticleStory;
+window.SurveylArticleBackend = SurveylArticleBackend;
+window.SurveylArticleDeploy = SurveylArticleDeploy;
+window.SurveylArticleOutro = SurveylArticleOutro;
+window.SurveylArticleTakeaway = SurveylArticleTakeaway;

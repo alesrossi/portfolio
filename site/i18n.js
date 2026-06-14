@@ -323,8 +323,54 @@ window.I18N = {
       },
     },
   },
+  felinoir: {
+    section: { en: "§ III. Now Showing", it: "§ III. In Sala" },
+    h1:      { en: "Feli",  it: "Feli" },
+    h2:      { en: "noir",  it: "noir" },
+    sub:     { en: "Rome cinema aggregator · Next.js 15 · Self-hosted", it: "Aggregatore cinema di Roma · Next.js 15 · Self-hosted" },
+    blurb: {
+      en: "Felinoir aggregates the films now showing across Rome's cinemas — browse what's on, find the nearest screening on an interactive map, filter by what you care about, and ask Felix, the built-in AI assistant, what to watch tonight.",
+      it: "Felinoir aggrega i film in programmazione nei cinema di Roma — scopri cosa danno, trova la proiezione più vicina su una mappa interattiva, filtra in base ai tuoi gusti e chiedi a Felix, l'assistente AI integrato, cosa guardare stasera.",
+    },
+    pillars: {
+      en: [
+        { k: "Fast by design", v: "Server-rendered with Next.js 15 and React, so pages stay quick and light." },
+        { k: "Always up to date", v: "Gathers the daily line-up from 40+ Rome cinemas, automatically." },
+        { k: "Find it on a map", v: "An interactive map, smart filters, and clean film-by-film listings." },
+        { k: "Ask Felix", v: "A built-in AI assistant, powered by Google Gemini, suggests what to watch." },
+      ],
+      it: [
+        { k: "Veloce per scelta", v: "Reso lato server con Next.js 15 e React: pagine rapide e leggere." },
+        { k: "Sempre aggiornato", v: "Raccoglie ogni giorno la programmazione di 40+ cinema di Roma, in automatico." },
+        { k: "Trovalo sulla mappa", v: "Mappa interattiva, filtri intelligenti ed elenchi film puliti." },
+        { k: "Chiedi a Felix", v: "Un assistente AI integrato, basato su Google Gemini, consiglia cosa vedere." },
+      ],
+    },
+    body: {
+      en: "Felinoir is a fast, modern web app built with Next.js 15 and React. Pages are rendered on the server so they load quickly and stay light, all wrapped in a moody film-noir look that works in both English and Italian. An interactive map places every cinema on screen, so you can spot the closest screening at a glance — and your filters are remembered between visits.",
+      it: "Felinoir è una web app moderna e veloce, costruita con Next.js 15 e React. Le pagine vengono renderizzate sul server, così si caricano in fretta e restano leggere, il tutto dentro un'estetica film-noir disponibile sia in italiano che in inglese. Una mappa interattiva mostra ogni cinema, così trovi a colpo d'occhio la proiezione più vicina — e i tuoi filtri vengono ricordati a ogni visita.",
+    },
+    body2: {
+      en: "Behind the scenes, Felinoir collects the showtimes from more than 40 Rome cinemas every day, tidies them up — recognising the same film across different listings — and enriches each title with posters, genres, and runtime. Its AI assistant, Felix, is built on Google Gemini and answers questions about what's on. The whole thing runs on my own server, fully containerised, with automatic security certificates and self-hosted analytics.",
+      it: "Dietro le quinte, Felinoir raccoglie ogni giorno la programmazione di oltre 40 cinema di Roma, la riordina — riconoscendo lo stesso film tra listini diversi — e arricchisce ogni titolo con poster, generi e durata. Il suo assistente AI, Felix, è basato su Google Gemini e risponde alle domande su cosa danno. Il tutto gira su un mio server, completamente containerizzato, con certificati di sicurezza automatici e analytics self-hosted.",
+    },
+    stack: {
+      en: { framework: "Next.js 15", language: "TypeScript", ui: "Tailwind + shadcn/ui", maps: "MapLibre GL", database: "PostgreSQL", ai: "Google Gemini", hosting: "Self-hosted (Docker)" },
+      it: { framework: "Next.js 15", language: "TypeScript", ui: "Tailwind + shadcn/ui", maps: "MapLibre GL", database: "PostgreSQL", ai: "Google Gemini", hosting: "Self-hosted (Docker)" },
+    },
+    links: {
+      live: { en: "Live site ↗", it: "Sito live ↗" },
+    },
+    diagram: { en: "How it works",      it: "Come funziona" },
+    fig:     { en: "FIG. III · Flow",   it: "FIG. III · Flusso" },
+    sidebar: { en: "specs · sidebar",   it: "specifiche · barra laterale" },
+    deployCaption: {
+      en: "Self-hosted · Dockerised · automatic TLS · private analytics",
+      it: "Self-hosted · Dockerizzato · TLS automatico · analytics privata",
+    },
+  },
   skinet: {
-    section: { en: "§ III. The Cover Story", it: "§ III. La Storia di Copertina" },
+    section: { en: "§ IV. The Cover Story", it: "§ IV. La Storia di Copertina" },
     h1:      { en: "One spec.",              it: "Una specifica." },
     h2:      { en: "Three",                  it: "Tre" },
     h3:      { en: "stacks.",                it: "stack." },
@@ -391,7 +437,7 @@ window.I18N = {
     },
   },
   infra: {
-    section: { en: "§ IV. The Workshop", it: "§ IV. L'Officina" },
+    section: { en: "§ V. The Workshop", it: "§ V. L'Officina" },
     h1:      { en: "A single server,",   it: "Un singolo droplet," },
     h2:      { en: "everything",           it: "tutto" },
     h3:      { en: "on it.",               it: "sopra." },
@@ -407,7 +453,7 @@ window.I18N = {
     },
   },
   studies: {
-    section: { en: "§ V. Education", it: "§ V. Formazione" },
+    section: { en: "§ VI. Education", it: "§ VI. Formazione" },
     items: {
       en: [{
         year: "2018 — 2022",
@@ -428,7 +474,7 @@ window.I18N = {
     },
   },
   work: {
-    section: { en: "§ VI. Work history", it: "§ VI. Esperienza lavorativa" },
+    section: { en: "§ VII. Work history", it: "§ VII. Esperienza lavorativa" },
     asRole:  { en: "as",   it: "come" },
     forCli:  { en: "for",  it: "per" },
     items: {

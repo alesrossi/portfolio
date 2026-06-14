@@ -45,7 +45,7 @@ window.I18N = {
     rolev:      { en: "Fullstack Developer", it: "Sviluppatore Fullstack" },
     locationv:  { en: "Italy · CET",         it: "Italia · CET" },
     specialtyv: { en: "Backend · APIs · DevOps · AI", it: "Backend · API · DevOps · AI" },
-    statusv:    { en: "● Open to interesting things", it: "● Disponibile per nuove frontiere" },
+    statusv:    { en: "● Open to interesting things", it: "● Disponibile per nuove avventure" },
     yearsv:     { en: "4",                   it: "4" },
     signed:     { en: "Signed · A.R.",       it: "Firmato · A.R." },
     stamped:    { en: "STAMPED · APPROVED",  it: "TIMBRATO · APPROVATO" },
@@ -436,9 +436,9 @@ window.I18N = {
         {
           year: "03/2022 — Present", company: "Interlogica",
           role: "Fullstack Developer", client: "Ayvens (formerly ALD)",
-          body: "Working directly with Ayvens, a prominent car-rental company. My team and I maintain the Ayvens API and its associated services. We manage legacy APIs built using BizTalk while developing the next generation with ASP.NET 10",
-          body2: "Alongside business logic we maintain multiple databases for the client — Oracle and SQL instances. Classic Agile workflow: Jira tickets submitted by the client, estimated, organized through the sprint. In 2024 Ayvens updated its internal security policy and tasked us with building a new Azure API Manager for secure connections to the outside world.",
-          tags: ["C#", ".NET Core", "BizTalk", "Oracle", "MS SQL", "Azure"],
+          body: "Ayvens, one of the world's largest vehicle-leasing and fleet-management groups, runs on an integration platform I maintain and modernize — the backbone tying together leasing contracts, fleet telematics, pricing, invoicing, driver management, and dealer integrations. It serves hundreds of thousands of requests a day to internal apps and third-party partners. Working autonomously under the project manager and in direct contact with the client, I own the code that keeps these systems talking — bridging data and business layers across Oracle and SQL Server.",
+          body2: "In 2024–2025 I led the BizTalk 2013→2020 upgrade, de-risking it with a parallel-run harness I designed: it mirrored every request to both versions and diffed the output byte-for-byte, validating tens of thousands of real requests over two months and catching dozens of bugs the new JSON pipeline introduced. I also helped build an Azure API Management gateway — OAuth2/JWT, rate limiting, IP restrictions, shipped via IaC and Azure Pipelines — now fronting all external partner traffic. Today I'm the sole engineer decomposing the platform into .NET 10 microservices ahead of BizTalk's end-of-life, and I contributed to proxypt, an internal RAG assistant over company docs.",
+          tags: ["C#", ".NET 10", "Microservices", "BizTalk", "Azure API Management", "Oracle", "MS SQL"],
         },
         {
           year: "07/2021 — 03/2022", company: "Deloitte",
@@ -452,9 +452,9 @@ window.I18N = {
         {
           year: "03/2022 — Presente", company: "Interlogica",
           role: "Sviluppatore Fullstack", client: "Ayvens (ex ALD)",
-          body: "Lavoro direttamente con Ayvens, un'importante azienda di noleggio auto. Il mio team e io manteniamo l'API Ayvens e i servizi associati. Gestiamo API legacy costruite con BizTalk mentre sviluppiamo la prossima generazione con ASP.NET 10",
-          body2: "Oltre alla logica di business, manteniamo diversi database per il cliente — istanze Oracle e SQL. Workflow Agile classico: ticket Jira inviati dal cliente, stimati, organizzati nello sprint. Nel 2024 Ayvens ha aggiornato la sua policy di sicurezza interna e ci ha incaricato di costruire un nuovo Azure API Manager per connessioni sicure verso l'esterno.",
-          tags: ["C#", ".NET Core", "BizTalk", "Oracle", "MS SQL", "Azure"],
+          body: "Ayvens, uno dei più grandi gruppi al mondo nel noleggio a lungo termine e nella gestione di flotte, si appoggia a una piattaforma di integrazione che mantengo e modernizzo — la spina dorsale che collega contratti di leasing, telematica delle flotte, pricing, fatturazione, gestione dei conducenti e integrazioni con i dealer. Serve centinaia di migliaia di richieste al giorno ad applicazioni interne e partner esterni. Lavorando in autonomia sotto il project manager e a contatto diretto con il cliente, sono responsabile del codice che tiene in dialogo questi sistemi — facendo da ponte tra i livelli dati e business su Oracle e SQL Server.",
+          body2: "Nel 2024–2025 ho guidato l'upgrade da BizTalk 2013 a 2020, riducendone i rischi con un harness di parallel-run che ho progettato: replicava ogni richiesta verso entrambe le versioni e confrontava l'output byte per byte, validando decine di migliaia di richieste reali nell'arco di due mesi e individuando decine di bug introdotti dal nuovo pipeline JSON. Ho inoltre contribuito a costruire un gateway Azure API Management — OAuth2/JWT, rate limiting, restrizioni IP, rilasciato tramite IaC e Azure Pipelines — che oggi fa da front-end a tutto il traffico dei partner esterni. Attualmente sono l'unico sviluppatore a scomporre la piattaforma in microservizi .NET 10 in vista del fine vita di BizTalk, e ho contribuito a proxypt, un assistente RAG interno sulla documentazione aziendale.",
+          tags: ["C#", ".NET 10", "Microservizi", "BizTalk", "Azure API Management", "Oracle", "MS SQL"],
         },
         {
           year: "07/2021 — 03/2022", company: "Deloitte",

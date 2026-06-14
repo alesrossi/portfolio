@@ -58,16 +58,16 @@ window.I18N = {
     biography: { en: "biography",          it: "biografia" },
     note:      { en: "EDITOR'S NOTE",      it: "NOTA DELL'EDITOR" },
     long: {
-      en: "I am a fullstack developer with a strong background in Rust and C# for backend solutions, as well as Angular and React on the frontend. In addition to building robust web applications, I specialize in creating efficient APIs that bridge databases and application layers. Over the two past years I've also ventured into DevOps, applied complex Azure solutions in productions and experimanted with Kubernetes, including this very website, which I host myself.",
-      it: "Sono uno sviluppatore fullstack con una solida esperienza in Rust e C# per le soluzioni backend, oltre ad Angular e React sul frontend. Oltre a costruire applicazioni web robuste, mi specializzo nella creazione di API efficienti che collegano database e livelli applicativi. Negli ultimi anni mi sono avventurato anche nel DevOps — applicato in Interlogica e su progetti personali, incluso questo stesso sito che self-hosto.",
+      en: "I'm a backend and DevOps engineer at Interlogica, where I work on the systems behind Ayvens, one of the largest car-leasing groups in the world. I look after the platform that connects their core services and handles hundreds of thousands of requests a day. Right now I'm rebuilding it on modern .NET microservices to retire an old legacy stack. Outside of work I build and run my own projects. Surveyl is a full platform for trading-card collectors that I designed, coded and deployed on my own Kubernetes cluster. Felinoir tracks what's playing in Rome's cinemas and has a built-in AI assistant to help you choose.",
+      it: "Sono un ingegnere backend e DevOps in Interlogica, dove lavoro sui sistemi dietro Ayvens, uno dei più grandi gruppi di noleggio auto al mondo. Mi occupo della piattaforma che collega i loro servizi principali e gestisce centinaia di migliaia di richieste al giorno. In questo periodo la sto ricostruendo su microservizi .NET moderni per mandare in pensione un vecchio stack legacy. Fuori dal lavoro costruisco e gestisco i miei progetti. Surveyl è una piattaforma completa per collezionisti di carte che ho progettato, sviluppato e deployato sul mio cluster Kubernetes. Felinoir tiene traccia dei film in programmazione nei cinema di Roma e ha un assistente AI integrato che ti aiuta a scegliere.",
     },
     philosophy: {
-      en: "My approach is grounded in the pursuit of high-quality code. I tackle tickets, fix issues, and continuously improve existing codebases and the infrastructure around them. I'm passionate about new tech and keeping up with the latest developments and always experimenting with new technologies in my free time.",
-      it: "Il mio approccio si fonda sulla ricerca di codice di alta qualità. Affronto ticket, risolvo problemi e miglioro continuamente le codebase esistenti e l'infrastruttura attorno. Sono appassionato di nuove tecnologie e dello stare aggiornato, mi aiuta ad adattarmi a nuove sfide e a risolvere problemi complessi con esperienze user-friendly.",
+      en: "What interests me most is the backend and the infrastructure around it. I like writing APIs that are clean and well tested, and I enjoy the operations side just as much: shipping things reliably and keeping them healthy in production. I hold my side projects to the same bar as my paid work. They run with proper logins, real payments and real monitoring, all on servers I manage myself.",
+      it: "Quello che mi interessa di più è il backend e l'infrastruttura attorno. Mi piace scrivere API pulite e ben testate, e mi piace altrettanto la parte operativa: mandare le cose in produzione in modo affidabile e tenerle in salute. Tengo i miei progetti personali allo stesso livello del lavoro per i clienti. Hanno login seri, pagamenti veri e monitoraggio vero, tutto su server che gestisco io.",
     },
     pullquote: {
-      en: "\"I strive for excellence and take pride in every aspect of my work.— Whether building something new or optimizing the old, the rigour stays the same. \"",
-      it: "\"Punto all'eccellenza e sono orgoglioso di ogni aspetto del mio lavoro.\" — Sia che si costruisca qualcosa di nuovo o si ottimizzi il vecchio, il rigore resta lo stesso.",
+      en: "\"Production-ready isn't something you add at the end. It's a hundred boring details, done right, every time.\"",
+      it: "\"Production-ready non è qualcosa che aggiungi alla fine. Sono cento dettagli noiosi, fatti bene, ogni volta.\"",
     },
   },
   stack: {
@@ -329,8 +329,8 @@ window.I18N = {
     h2:      { en: "noir",  it: "noir" },
     sub:     { en: "Rome cinema aggregator · Next.js 15 · Self-hosted", it: "Aggregatore cinema di Roma · Next.js 15 · Self-hosted" },
     blurb: {
-      en: "Felinoir aggregates the films now showing across Rome's cinemas — browse what's on, find the nearest screening on an interactive map, filter by what you care about, and ask Felix, the built-in AI assistant, what to watch tonight.",
-      it: "Felinoir aggrega i film in programmazione nei cinema di Roma — scopri cosa danno, trova la proiezione più vicina su una mappa interattiva, filtra in base ai tuoi gusti e chiedi a Felix, l'assistente AI integrato, cosa guardare stasera.",
+      en: "Felinoir brings together everything showing in Rome's cinemas. See what's on tonight, find the nearest screening on a map, and ask Felix, the built-in AI assistant, what to watch.",
+      it: "Felinoir raccoglie tutto quello che danno nei cinema di Roma. Guarda cosa c'è stasera, trova la proiezione più vicina sulla mappa e chiedi a Felix, l'assistente AI integrato, cosa guardare.",
     },
     pillars: {
       en: [
@@ -347,12 +347,12 @@ window.I18N = {
       ],
     },
     body: {
-      en: "Felinoir is a fast, modern web app built with Next.js 15 and React. Pages are rendered on the server so they load quickly and stay light, all wrapped in a moody film-noir look that works in both English and Italian. An interactive map places every cinema on screen, so you can spot the closest screening at a glance — and your filters are remembered between visits.",
-      it: "Felinoir è una web app moderna e veloce, costruita con Next.js 15 e React. Le pagine vengono renderizzate sul server, così si caricano in fretta e restano leggere, il tutto dentro un'estetica film-noir disponibile sia in italiano che in inglese. Una mappa interattiva mostra ogni cinema, così trovi a colpo d'occhio la proiezione più vicina — e i tuoi filtri vengono ricordati a ogni visita.",
+      en: "Felinoir is a fast, modern web app built with Next.js 15 and React. Pages are rendered on the server, so they load quickly and stay light. It has a moody film-noir look and works in both English and Italian. An interactive map puts every cinema on screen, so you can spot the closest screening at a glance. It even remembers your filters between visits.",
+      it: "Felinoir è una web app moderna e veloce, costruita con Next.js 15 e React. Le pagine vengono renderizzate sul server, così si caricano in fretta e restano leggere. Ha un'estetica film-noir ed è disponibile sia in italiano che in inglese. Una mappa interattiva mostra ogni cinema, così trovi a colpo d'occhio la proiezione più vicina. E si ricorda i tuoi filtri a ogni visita.",
     },
     body2: {
-      en: "Behind the scenes, Felinoir collects the showtimes from more than 40 Rome cinemas every day, tidies them up — recognising the same film across different listings — and enriches each title with posters, genres, and runtime. Its AI assistant, Felix, is built on Google Gemini and answers questions about what's on. The whole thing runs on my own server, fully containerised, with automatic security certificates and self-hosted analytics.",
-      it: "Dietro le quinte, Felinoir raccoglie ogni giorno la programmazione di oltre 40 cinema di Roma, la riordina — riconoscendo lo stesso film tra listini diversi — e arricchisce ogni titolo con poster, generi e durata. Il suo assistente AI, Felix, è basato su Google Gemini e risponde alle domande su cosa danno. Il tutto gira su un mio server, completamente containerizzato, con certificati di sicurezza automatici e analytics self-hosted.",
+      en: "Behind the scenes, Felinoir collects the showtimes from more than 40 Rome cinemas every day. It cleans them up, spotting the same film across different listings, and adds posters, genres and runtime to each title. Its AI assistant, Felix, runs on Google Gemini and answers questions about what's on. I host the whole thing myself, in containers, with automatic security certificates and private analytics.",
+      it: "Dietro le quinte, Felinoir raccoglie ogni giorno la programmazione di oltre 40 cinema di Roma. La riordina, riconoscendo lo stesso film tra listini diversi, e aggiunge a ogni titolo poster, generi e durata. Il suo assistente AI, Felix, è basato su Google Gemini e risponde alle domande su cosa danno. Ospito tutto io, in container, con certificati di sicurezza automatici e analytics privata.",
     },
     stack: {
       en: { framework: "Next.js 15", language: "TypeScript", ui: "Tailwind + shadcn/ui", maps: "MapLibre GL", database: "PostgreSQL", ai: "Google Gemini", hosting: "Self-hosted (Docker)" },

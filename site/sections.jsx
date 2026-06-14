@@ -77,7 +77,7 @@ const STACK = {
   backend:  ["Rust", "C# / .NET", "ASP.NET Core", "Actix-web", "Node.js", "Apex"],
   frontend: ["Angular", "React", "Remix", "TypeScript", "HTML/CSS"],
   data:     ["PostgreSQL", "Redis", "Oracle", "MS SQL", "Entity Framework"],
-  devops:   ["Docker", "Kubernetes", "Linux", "Nginx", "Stripe", "Azure"],
+  devops:   ["Docker", "Kubernetes", "Helm", "CI/CD", "Azure", "Nginx", "Linux"],
 };
 
 function AboutSection() {

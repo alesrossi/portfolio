@@ -159,6 +159,7 @@ function SurveylSection() {
         </p>
         <div style={{ display: 'flex', gap: 12, marginTop: 24, justifyContent: 'center' }}>
           <a href="https://surveyl.top/" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '8px 18px', border: '1px solid var(--fg)', background: 'var(--fg)', color: 'var(--bg)', textDecoration: 'none' }}>{tt(I18N.surveyl.links.live)}</a>
+          <a href="https://info.surveyl.top/" target="_blank" rel="noopener noreferrer" style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '8px 18px', border: '1px solid var(--fg)', background: 'var(--fg)', color: 'var(--bg)', textDecoration: 'none' }}>{tt(I18N.surveyl.links.infoSite)}</a>
           <a href="surveyl.html" style={{ fontFamily: 'var(--mono)', fontSize: 11, letterSpacing: '0.12em', textTransform: 'uppercase', padding: '8px 18px', border: '1px solid var(--fg)', background: 'transparent', color: 'var(--fg)', textDecoration: 'none' }}>{tt(I18N.surveyl.links.info)}</a>
         </div>
       </div>

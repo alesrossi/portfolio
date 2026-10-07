@@ -114,6 +114,7 @@ window.I18N = {
     links: {
       info: { en: "Read the deep dive →", it: "Leggi l'approfondimento →" },
       live: { en: "Live site ↗", it: "Sito live ↗" },
+      infoSite: { en: "Info site ↗", it: "Info site ↗" },
     },
     diagram: { en: "Cluster · diagram",   it: "Cluster · diagramma" },
     fig:     { en: "FIG. II · Kubernetes", it: "FIG. II · Kubernetes" },
